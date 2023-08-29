@@ -1,8 +1,10 @@
 # Bookmarks API
+
 Welcome to the Bookmarks API project! This is a NestJS-based API project that allows you to manage bookmarks and users.
 
 ## Database Design Diagram
-![Database Diagram]()
+
+![Database Diagram](https://raw.githubusercontent.com/mr-meselmani/bookmarks-api/3165d8488a35cf0a11382746f46afe170a0a76ff/db-diagram/Bookmarks%20API.svg)
 
 ## Table of Contents
 
@@ -18,9 +20,11 @@ Welcome to the Bookmarks API project! This is a NestJS-based API project that al
 The project follows the following structure:
 
 - `prisma/`: Directory containing Prisma-related files.
+
   - `schema.prisma`: Prisma schema definition file for defining your data model.
 
 - `src/`: Application source code.
+
   - `auth/`: Authentication-related components.
   - `bookmark/`: Bookmark-related components.
   - `prisma/`: Prisma service and configurations.
@@ -84,3 +88,7 @@ I added a test db in `docker-compose.yml` to run the test again & again just run
 ```bash
 npm run test:e2e
 ```
+
+## License
+
+Bookmarks API is [MIT licensed](https://github.com/mr-meselmani/bookmarks-api/blob/master/LICENSE)
