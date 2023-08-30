@@ -12,6 +12,7 @@ Welcome to the Bookmarks API project! This is a NestJS-based API project that al
 - [Getting Started](#getting-started)
 - [Environment Variables](#environment-variables)
 - [Running the Application](#running-the-application)
+- [API Endpoints](#api-endpoints)
 - [Testing](#testing)
 - [License](#license)
 
@@ -80,6 +81,129 @@ npm run db:dev:restart
 ```bash
 npm run start:dev
 ```
+
+## API Endpoints
+
+### 1. Sign Up
+
+**Endpoint:** `POST /auth/signup`
+
+**Description:** This endpoint is used for user registration.
+
+**Request Body:**
+
+```json
+{
+  "email": "asm@dev.com",
+  "password": "asm123"
+}
+```
+
+### 2. Sign In
+
+**Endpoint:** `POST /auth/signin`
+
+**Description:** This endpoint is used for user authorization.
+
+**Request Body:**
+
+```json
+{
+  "email": "asm@dev.com",
+  "password": "asm123"
+}
+```
+
+### 3. Get Me
+
+**Endpoint:** `GET /users/me`
+
+**Description:** This endpoint is used getting current user.
+
+**Headers:** Authorization: Bearer `jwt token`.
+
+
+### 4. Edit User
+
+**Endpoint:** `PATCH /users`
+
+**Description:** This endpoint is used for user authorization.
+
+**Headers:** Authorization: Bearer `jwt token`.
+
+**Request Body:** all optional
+
+```json
+{
+  "email": "asm@engineer.com",
+  "firstName": "ASM",
+  "lastName": "Engineer"
+}
+```
+
+### 5. Get Bookmarks
+
+**Endpoint:** `GET /bookmarks`
+
+**Description:** This endpoint is used to get all bookmarks.
+
+**Headers:** Authorization: Bearer `jwt token`.
+
+
+### 6. Create Bookmark
+
+**Endpoint:** `POST /bookmarks`
+
+**Description:** This endpoint is used to create bookmark.
+
+**Headers:** Authorization: Bearer `jwt token`.
+
+**Request Body:** description is optional
+
+```json
+{
+  "title": "Bookmark Title",
+  "description": "",
+  "link": "https://twitter.com/mr_meselmani"
+}
+```
+
+### 7. Get Bookmark By ID
+
+**Endpoint:** `GET /bookmarks/{id}`
+
+**Description:** This endpoint is used to get bookmark by id.
+
+**Headers:** Authorization: Bearer `jwt token`.
+
+
+### 8. Edit Bookmark
+
+**Endpoint:** `PATCH /bookmarks/{id}`
+
+**Description:** This endpoint is used to edit bookmark.
+
+**Headers:** Authorization: Bearer `jwt token`.
+
+**Request Body:** description is optional
+
+```json
+{
+  "title": "Bookmark Two",
+  "description": "Supercalifragilisticexpialidocious",
+  "link": "https://twitter.com/mr_meselmani"
+}
+```
+
+### 9. Delete Bookmark
+
+**Endpoint:** `DELETE /bookmarks/{id}`
+
+**Description:** This endpoint is used to edit bookmark.
+
+**Headers:** Authorization: Bearer `jwt token`.
+
+
 
 ## Testing
 
