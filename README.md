@@ -84,6 +84,10 @@ npm run start:dev
 
 ## API Endpoints
 
+### Base Url
+
+`http://localhost:3333` try endpoint in postman or thunderclient(vscode) or whatever HTTP client you want e.g: `http://localhost:3333/auth/signup`
+
 ### 1. Sign Up
 
 **Endpoint:** `POST /auth/signup`
